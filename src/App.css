@@ -1,0 +1,57 @@
+/* Make sure the body uses flexbox to center all content vertically & horizontally */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* horizontal centering */
+  justify-content: flex-start; /* vertical alignment (top) */
+  min-height: 100vh;       /* ensure full viewport height */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: rgb(15, 53, 56);
+}
+
+/* Title */
+.Title {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  color: white;
+}
+
+/* Cards container */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* horizontal centering of cards */
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;              /* ensures container spans viewport width */
+  max-width: 1200px;        /* optional: constrain width */
+}
+
+/* Individual card */
+.card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: rgba(62, 110, 109, 0.79);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
